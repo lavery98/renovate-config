@@ -1,0 +1,24 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Shared Renovate configuration",
+  "extends": [
+    "config:best-practices",
+    ":approveMajorUpdates",
+    ":automergeLinters",
+    ":automergePatch",
+    ":automergeTesters",
+    ":combinePatchMinorReleases",
+    ":enableVulnerabilityAlerts",
+    ":maintainLockFilesMonthly",
+    ":semanticCommits",
+    ":semanticCommitScope(deps)"
+  ],
+  "postUpdateOptions": ["pnpmDedupe", "yarnDedupeHighest"],
+  "packageRules": [
+    {
+      "description": "One week stability period for npm packages",
+      "matchDatasources": ["npm"],
+      "minimumReleaseAge": "7 days"
+    }
+  ]
+}
