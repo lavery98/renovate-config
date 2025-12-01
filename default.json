@@ -3,6 +3,7 @@
   "description": "Shared Renovate configuration",
   "extends": [
     "config:best-practices",
+    ":pinAllExceptPeerDependencies",
     ":approveMajorUpdates",
     ":automergeLinters",
     ":automergePatch",
