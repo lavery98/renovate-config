@@ -3,6 +3,7 @@
   "description": "Shared Renovate configuration",
   "extends": [
     "config:best-practices",
+    "helpers:pinGitHubActionDigestsToSemver",
     ":pinAllExceptPeerDependencies",
     ":approveMajorUpdates",
     ":automergeLinters",
